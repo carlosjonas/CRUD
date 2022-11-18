@@ -57,11 +57,18 @@ use \App\Db\Database;
 		 */
 		public function cadastrar(){
 			//Inserindo a vaga no banco
-				$database = new Database('cadastro');
-				echo "<pre>"; print_r($database);echo "</pre>";
-			//Atribuir o ID
+			$database = new Database('usuarios');
+			$this->id = $database->insert([
+				'nome' 	   => $this->nome,
+				'email'    => $this->email,
+				'rg' 	   => $this->rg,
+				'cpf' 	   => $this->cpf,
+				'telefone' => $this->telefone,
+				'ativo'    => $this->ativo,
+			]);
 
 			//Retornar sucesso
+			return true;
 		}
 	}
 
