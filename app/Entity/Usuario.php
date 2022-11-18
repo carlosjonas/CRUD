@@ -2,6 +2,8 @@
 
 namespace App\Entity;
 
+use \App\Db\Database;
+
 	/**
 	 * Classe usuário para o gerenciamento de dados da aplicação
 	 */
@@ -48,6 +50,19 @@ namespace App\Entity;
 		 * @var boolean
 		 */
 		public $ativo;
+
+		/**
+		 * Método responsável por cadastrar um usuário no banco
+		 * @return boolean
+		 */
+		public function cadastrar(){
+			//Inserindo a vaga no banco
+				$database = new Database('cadastro');
+				echo "<pre>"; print_r($database);echo "</pre>";
+			//Atribuir o ID
+
+			//Retornar sucesso
+		}
 	}
 
 
