@@ -15,11 +15,11 @@
 		$usuario->cpf 	   = $_POST['cpf'];
 		$usuario->telefone = $_POST['telefone'];
 		$usuario->ativo    = $_POST['ativo'];
-		
-		//echo "<pre>"; print_r($usuario);echo "</pre>";
 
 		$usuario->cadastrar();
 
+		header('location: index.php?status=success');
+		exit;
 	}
 
 	include __DIR__.'/includes/header.php';
