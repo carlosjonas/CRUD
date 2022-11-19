@@ -3,6 +3,7 @@
 namespace App\Entity;
 
 use \App\Db\Database;
+use \PDO;
 
 	/**
 	 * Classe usuário para o gerenciamento de dados da aplicação
@@ -70,9 +71,20 @@ use \App\Db\Database;
 			//Retornar sucesso
 			return true;
 		}
+
+		/**
+		 * Método responsável por consultar os usuários no banco
+		 * @param string $where
+		 * @param string $order
+		 * @param string $limit
+		 * @return array
+		 */
+		public static function getUsuarios($where = null, $order = null, $limit = null){
+			//Inserindo a vaga no banco
+			return (new Database('usuarios'))->select($where, $order, $limit)->fetchAll(PDO::FETCH_CLASS,self::class);
+
+			//Retornar sucesso
+			return true;
+		}
 	}
-
-
-
-
  ?>
