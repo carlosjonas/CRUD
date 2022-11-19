@@ -101,6 +101,26 @@
 			return $this->connection->lastInsertId();
 		}
 
+		/**
+		 * Método responsável por executar uma consulta no banco
+		 * @param string $where
+		 * @param string $order
+		 * @param string $limit
+		 * @param string $fields
+		 * @return PDOStatement
+		 */
+		public function select($where = null, $order = null, $limit = null, $fields = '*'){
+			// Dados da query
+			$where = strlen($where) ? 'WHERE' .$where : '';
+			$order = strlen($order) ? 'ORDER BY' .$order : '';
+			$limit = strlen($limit) ? 'LIMIT' .$limit : '';
+			//Monta a query
+			$query = 'SELECT ' .$fields. ' FROM ' .$this->table. ' ' .$where. ' ' .$limit ;
+
+			//Executa a query
+			return $this->execute($query);
+		}
+
 	}
 
 
