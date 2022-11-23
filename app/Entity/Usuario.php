@@ -83,8 +83,19 @@ use \PDO;
 			//Inserindo a vaga no banco
 			return (new Database('usuarios'))->select($where, $order, $limit)->fetchAll(PDO::FETCH_CLASS,self::class);
 
+		}
+
+		/**
+		 * Método responsável por buscar uma vaga com base em seu id no banco
+		 * @param integer $id
+		 * @return Usuario
+		 */
+		public static function getUsuario($id){
+			//Inserindo a vaga no banco
+			return (new Database('usuarios'))->select('id=' .$id)->fetchObject(self::class);
+
 			//Retornar sucesso
-			return true;
+			//return true;
 		}
 	}
  ?>
