@@ -10,7 +10,14 @@
 							<td>' .$usuario->cpf. '</td>
 							<td>' .$usuario->telefone. '</td>
 							<td>' .($usuario->ativo == '1' ? 'Sim' : 'Não'). '</td>
-							<td></td>
+							<td>
+								<a href="editar.php?id=' .$usuario->id. '">
+									<button type="button" class="btn btn-primary">Editar</button>
+								</a>
+								<a href="excluir.php?id=' .$usuario->id. '">
+									<button type="button" class="btn btn-danger">Excluir</button>
+								</a>
+							</td>
 						</tr>';
 	}
 	 ?>
