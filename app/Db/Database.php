@@ -121,6 +121,23 @@
 			return $this->execute($query);
 		}
 
+		/**
+		 * Método responsável por atualizar um usuario no banco
+		 * @param string $where
+		 * @param array $values [ field =>value]
+		 * @return boolean
+		 */
+		public function update($where , $values){
+			// Dados da query
+			$fields = array_keys($values);
+
+			//Monta a query
+			$query = 'UPDATE ' .$this->table. ' SET ' .implode('=?,',$fields). '=? WHERE ' .$where;
+
+			//Executa a query
+			return $this->execute($query,array_values($values));
+		}
+
 	}
 
 
