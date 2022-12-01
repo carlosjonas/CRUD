@@ -65,7 +65,26 @@ use \PDO;
 				'rg' 	   => $this->rg,
 				'cpf' 	   => $this->cpf,
 				'telefone' => $this->telefone,
-				'ativo'    => $this->ativo,
+				'ativo'    => $this->ativo
+			]);
+
+			//Retornar sucesso
+			return true;
+		}
+
+		/**
+		 * Método responsável por atualizar um usuário no banco
+		 * @return boolean
+		 */
+		public function atualizar(){
+			//Inserindo a vaga no banco
+			return (new Database('usuarios'))->update('id = ' .$this->id,[
+				'nome' 	   => $this->nome,
+				'email'    => $this->email,
+				'rg' 	   => $this->rg,
+				'cpf' 	   => $this->cpf,
+				'telefone' => $this->telefone,
+				'ativo'    => $this->ativo
 			]);
 
 			//Retornar sucesso
@@ -86,13 +105,13 @@ use \PDO;
 		}
 
 		/**
-		 * Método responsável por buscar uma vaga com base em seu id no banco
+		 * Método responsável por buscar um usuário com base em seu id no banco
 		 * @param integer $id
 		 * @return Usuario
 		 */
 		public static function getUsuario($id){
 			//Inserindo a vaga no banco
-			return (new Database('usuarios'))->select('id=' .$id)->fetchObject(self::class);
+			return (new Database('usuarios'))->select('id= ' .$id)->fetchObject(self::class);
 
 			//Retornar sucesso
 			//return true;
