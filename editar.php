@@ -2,6 +2,8 @@
 	
 	require __DIR__.'/vendor/autoload.php';
 
+	define('TITLE','Editar vaga');
+
 	use \App\Entity\Usuario;
 
 	//Validação do id
@@ -10,20 +12,26 @@
 		exit;
 	}
 
+	//Consultando a vaga para editar
 	$usuario = Usuario::getUsuario($_GET['id']);
-	echo "<pre>"; print_r($usuario); echo "</pre>"; exit;
+	
+	//Validação da vaga
+	if (!$usuario instanceof Usuario) {
+		header('location: index.php?status=error');
+		exit;				
+	}
 
 	//Validação do POST
 	if (isset($_POST['nome'],$_POST['email'],$_POST['rg'],$_POST['cpf'],$_POST['telefone'],$_POST['ativo'])) {
-		$usuario = new Usuario;
 		$usuario->nome 	   = $_POST['nome'];
 		$usuario->email    = $_POST['email'];
 		$usuario->rg 	   = $_POST['rg'];
 		$usuario->cpf 	   = $_POST['cpf'];
 		$usuario->telefone = $_POST['telefone'];
 		$usuario->ativo    = $_POST['ativo'];
+		//echo "<pre>"; print_r($usuario); echo "</pre>"; exit;
 
-		$usuario->cadastrar();
+		$usuario->atualizar();
 
 		header('location: index.php?status=success');
 		exit;
