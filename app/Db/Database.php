@@ -135,7 +135,26 @@
 			$query = 'UPDATE ' .$this->table. ' SET ' .implode('=?,',$fields). '=? WHERE ' .$where;
 
 			//Executa a query
-			return $this->execute($query,array_values($values));
+			$this->execute($query,array_values($values));
+
+			//Retorna sucesso
+			return true;
+		}
+
+		/**
+		 * Método responsável por deletar um usuario no banco
+		 * @param string $where
+		 * @return boolean
+		 */
+		public function delete($where){
+			//Monta a query
+			$query = 'DELETE FROM ' .$this->table. ' WHERE ' .$where;
+
+			//Executa a query
+			$this->execute($query);
+
+			//Retorna sucesso
+			return true;
 		}
 
 	}
