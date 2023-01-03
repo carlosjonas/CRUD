@@ -1,5 +1,18 @@
 	<?php 
 
+	$mensagem = '';
+	if (isset($_GET['status'])) {
+		switch ($_GET['status']) {
+			case 'success':
+				$mensagem = '<div class = "alert alert-success">Ação executada com sucesso ! <button type="button" aria-label="Close" data-bs-dismiss="alert" class="btn-close"> </button></div>';
+				break;
+			
+			case 'error':
+				$mensagem = '<div class = "alert alert-danger">Ação não executada ! <button type="button" aria-label="Close" data-bs-dismiss="alert" class="btn-close"> </button></div>';
+				break;
+		}
+	}
+
 	$resultados = '';
 	foreach ($usuarios as $usuario) {
 		$resultados .= '<tr>
@@ -24,6 +37,8 @@
 
 	<main>
 		<div class="container mt-5 pt-5">
+
+			<?= $mensagem; ?>
 			<section>
 				<a href="cadastrar.php">
 					<button class="btn btn-success">Novo usuário</button>

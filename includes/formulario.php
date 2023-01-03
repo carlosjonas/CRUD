@@ -15,57 +15,58 @@ use \App\Entity\Usuario;
 			<form method="POST">
 				<div class="form-group mt-3">
 					<label>Nome</label>
-					<input type="text" class="form-control" name="nome" minlength="8" maxlength="255" value="<?php if (@$usuario != 'null') {
-									echo @$usuario->nome;			
+					<input type="text" class="form-control" name="nome" minlength="8" maxlength="255" 
+					<?php if (@$usuario != 'null') {
+									echo 'value="'.@$usuario->nome.'"';			
 								 }else{
-									echo "";
+									echo 'null';
 								 } ?>
-							"required>
+							required>
 
 				</div>
 
 				<div class="form-group mt-3">
 					<label>Email</label>
 					<input type="email" class="form-control" name="email" minlength="12" maxlength="255" 
-					value="<?php if (@$usuario != 'null') {
-									echo @$usuario->email;			
+					<?php if (@$usuario != 'null') {
+									echo 'value="'.@$usuario->email.'"';			
 								 }else{
-									echo "";
+									echo 'null';
 								 } ?>
-							"required>
+							required>
 				</div>
 
 				<div class="form-group mt-3">
 					<label>RG</label>
 					<input type="text" class="form-control" name="rg" minlength="12" maxlength="12" 
-					value="<?php if (@$usuario != 'null') {
-									echo @$usuario->rg;			
+					<?php if (@$usuario != 'null') {
+									echo 'value="'.@$usuario->rg.'"';			
 								 }else{
 									echo "";
 								 } ?>
-							"required>
+							required>
 				</div>
 
 				<div class="form-group mt-3">
 					<label>CPF</label>
 					<input type="text" class="form-control" name="cpf" minlength="14" maxlength="14" 
-					value="<?php if (@$usuario != 'null') {
-									echo @$usuario->cpf;			
+					<?php if (@$usuario != 'null') {
+									echo 'value="'.@$usuario->cpf.'"';			
 								 }else{
 									echo "";
 								 } ?>
-							"required>
+							required>
 				</div>
 
 				<div class="form-group mt-3">
 					<label>Telefone</label>
 					<input type="text" class="form-control" name="telefone" minlength="14" maxlength="14" 
-					value="<?php if (@$usuario != 'null') {
-									echo @$usuario->telefone;			
+					<?php if (@$usuario != 'null') {
+									echo 'value="'.@$usuario->telefone.'"';			
 								 }else{
 									echo "";
 								 } ?>
-							"required>
+							required>
 				</div>
 
 				<div class="form-group mt-3">
