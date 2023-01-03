@@ -92,6 +92,18 @@ use \PDO;
 		}
 
 		/**
+		 * Método responsável por excluir um usuário no banco
+		 * @return boolean
+		 */
+		public function excluir(){
+			//Inserindo a vaga no banco
+			return (new Database('usuarios'))->delete('id = ' .$this->id);
+
+			//Retornar sucesso
+			return true;
+		}
+
+		/**
 		 * Método responsável por consultar os usuários no banco
 		 * @param string $where
 		 * @param string $order
