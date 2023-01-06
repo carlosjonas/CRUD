@@ -1,6 +1,8 @@
 <?php 
 	
 	require __DIR__.'/vendor/autoload.php';
+
+	define('TITLE','Lista de Usuários');
 	
 	use \App\Entity\Usuario;
 
