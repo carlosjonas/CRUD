@@ -1,6 +1,5 @@
 <?php 
-
-use \App\Entity\Usuario;
+	use \App\Entity\Usuario;
  ?>
 	<main>
 		<div class="container mt-5 pt-5">
@@ -97,7 +96,7 @@ use \App\Entity\Usuario;
 					</div>
 				</div>
 
-				<div class="form-group mt-3">
+				<div class="form-group mt-3 mb-3">
 					<button class="btn btn-success" type="submit">Enviar</button>
 				</div>
 			</form>
