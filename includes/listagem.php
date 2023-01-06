@@ -46,6 +46,9 @@
 			</section>
 
 			<section>
+
+				<h2 class="mt-3"><?= TITLE; ?></h2>
+
 				<table class="table mt-3">
 					<thead>
 						<tr>
