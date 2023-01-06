@@ -14,7 +14,7 @@
 			<form method="POST">
 				<div class="form-group mt-3">
 					<label>Nome</label>
-					<input type="text" class="form-control" name="nome" minlength="8" maxlength="255" 
+					<input type="text" class="form-control" id="nome" name="nome" placeholder="Nome*" minlength="8" maxlength="255" 
 					<?php if (@$usuario != 'null') {
 									echo 'value="'.@$usuario->nome.'"';			
 								 }else{
@@ -26,7 +26,7 @@
 
 				<div class="form-group mt-3">
 					<label>Email</label>
-					<input type="email" class="form-control" name="email" minlength="12" maxlength="255" 
+					<input type="email" class="form-control" id="email" name="email" placeholder="Email*" minlength="12" maxlength="255" 
 					<?php if (@$usuario != 'null') {
 									echo 'value="'.@$usuario->email.'"';			
 								 }else{
@@ -37,7 +37,7 @@
 
 				<div class="form-group mt-3">
 					<label>RG</label>
-					<input type="text" class="form-control" name="rg" minlength="12" maxlength="12" 
+					<input type="text" class="form-control" onkeydown="mascara()" id="rg" name="rg" placeholder="RG*" minlength="12" maxlength="12" 
 					<?php if (@$usuario != 'null') {
 									echo 'value="'.@$usuario->rg.'"';			
 								 }else{
@@ -48,7 +48,7 @@
 
 				<div class="form-group mt-3">
 					<label>CPF</label>
-					<input type="text" class="form-control" name="cpf" minlength="14" maxlength="14" 
+					<input type="text" class="form-control" id="cpf" name="cpf" placeholder="CPF*" minlength="14" maxlength="14" 
 					<?php if (@$usuario != 'null') {
 									echo 'value="'.@$usuario->cpf.'"';			
 								 }else{
@@ -59,7 +59,7 @@
 
 				<div class="form-group mt-3">
 					<label>Telefone</label>
-					<input type="text" class="form-control" name="telefone" minlength="14" maxlength="14" 
+					<input type="text" class="form-control" onkeydown="mascara()" id="telefone" name="telefone" placeholder="Telefone*" minlength="14" maxlength="14" 
 					<?php if (@$usuario != 'null') {
 									echo 'value="'.@$usuario->telefone.'"';			
 								 }else{
