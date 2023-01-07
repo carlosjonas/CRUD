@@ -37,7 +37,7 @@
 
 				<div class="form-group mt-3">
 					<label>RG</label>
-					<input type="text" class="form-control" onkeydown="mascara()" id="rg" name="rg" placeholder="RG*" minlength="12" maxlength="12" 
+					<input type="text" class="form-control" id="rg" name="rg" placeholder="RG*" minlength="12" maxlength="12" 
 					<?php if (@$usuario != 'null') {
 									echo 'value="'.@$usuario->rg.'"';			
 								 }else{
@@ -59,7 +59,7 @@
 
 				<div class="form-group mt-3">
 					<label>Telefone</label>
-					<input type="text" class="form-control" onkeydown="mascara()" id="telefone" name="telefone" placeholder="Telefone*" minlength="14" maxlength="14" 
+					<input type="text" class="form-control" id="telefone" name="telefone" placeholder="Telefone*" minlength="14" maxlength="14" 
 					<?php if (@$usuario != 'null') {
 									echo 'value="'.@$usuario->telefone.'"';			
 								 }else{
