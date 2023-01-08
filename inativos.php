@@ -3,6 +3,7 @@
 	require __DIR__.'/vendor/autoload.php';
 
 	define('TITLE','Usuários inativos');
+	define('ATIVO','inativos');
 
 	use \App\Entity\Usuario;
 

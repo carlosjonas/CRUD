@@ -11,7 +11,7 @@
     <div class="container">
         <nav class="navbar navbar-dark bg-dark fixed-top">
           <div class="container">
-            <a class="navbar-brand" href="#">Cadastro de Usuários</a>
+            <a class="navbar-brand" href="index.php">Cadastro de Usuários</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar">
               <span class="navbar-toggler-icon"></span>
             </button>
@@ -23,13 +23,13 @@
               <div class="offcanvas-body">
                 <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
                   <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="index.php">Geral</a>
+                    <a class="nav-link <?php if(ATIVO=="index"){echo "active";}?>" aria-current="page" href="index.php">Geral</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="ativos.php">Ativos</a>
+                    <a class="nav-link <?php if(ATIVO=="ativos"){echo "active";}?>" aria-current="page" href="ativos.php">Ativos</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="inativos.php">Inativos</a>
+                    <a class="nav-link <?php if(ATIVO=="inativos"){echo "active";}?>" href="inativos.php">Inativos</a>
                   </li>
                 </ul>
               </div>
