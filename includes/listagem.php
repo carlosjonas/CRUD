@@ -4,11 +4,15 @@
 	if (isset($_GET['status'])) {
 		switch ($_GET['status']) {
 			case 'success':
-				$mensagem = '<div class = "alert alert-success">Ação executada com sucesso ! <button type="button" aria-label="Close" data-bs-dismiss="alert" class="btn-close"> </button></div>';
+				$mensagem = '<div class="alert alert-success alert-dismissible fade show" role="alert">
+  								<strong>Ação executada com sucesso!</strong>  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+							</div>';
 				break;
 			
 			case 'error':
-				$mensagem = '<div class = "alert alert-danger">Ação não executada ! <button type="button" aria-label="Close" data-bs-dismiss="alert" class="btn-close"> </button></div>';
+				$mensagem = '<div class="alert alert-danger alert-dismissible fade show" role="alert">
+  								<strong>Ação não executada!</strong>  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+							</div>';
 				break;
 		}
 	}
@@ -16,19 +20,15 @@
 	$resultados = '';
 	foreach ($usuarios as $usuario) {
 		$resultados .= '<tr>
-							<td>' .$usuario->id. '</td>
-							<td>' .$usuario->nome. '</td>
-							<td>' .$usuario->email. '</td>
+							<td class="id">' .$usuario->id. '</td>
+							<td class="nome">' .$usuario->nome. '</td>
+							<td class="email">' .$usuario->email. '</td>
 							<td>' .$usuario->rg. '</td>
 							<td>' .$usuario->cpf. '</td>
 							<td>' .$usuario->telefone. '</td>
-							<td>' .($usuario->ativo == '1' ? 'Sim' : 'Não'). '</td>
+							<td class="ativo">' .($usuario->ativo == '1' ? 'Sim' : 'Não'). '</td>
 							<td>
-								<a href="editar.php?id=' .$usuario->id. '">
-									<button type="button" class="btn btn-primary">Editar</button>
-								</a>
-								<a href="excluir.php?id=' .$usuario->id. '">
-									<button type="button" class="btn btn-danger">Excluir</button>
+								<a href="editar.php?id=' .$usuario->id. '"><button type="button" class="btn btn-primary botao_lista">Editar</button></a><a href="excluir.php?id=' .$usuario->id. '"><button type="button" class="btn btn-danger botao_lista">Excluir</button>
 								</a>
 							</td>
 						</tr>';
@@ -52,13 +52,13 @@
 				<table class="table mt-3">
 					<thead>
 						<tr>
-							<th>Id</th>
-							<th>Nome</th>
-							<th>Email</th>
+							<th class="id">Id</th>
+							<th class="nome">Nome</th>
+							<th class="email">Email</th>
 							<th>RG</th>
 							<th>CPF</th>
 							<th>Telefone</th>
-							<th>Ativo</th>
+							<th class="ativo">Ativo</th>
 							<th>Ações</th>
 						</tr>
 					</thead>

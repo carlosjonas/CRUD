@@ -1,3 +1,29 @@
 body{
-	background-color: red;
+    font-family: arial;
+    font-size: 16px;
+
+}
+
+table {
+    table-layout:fixed;
+    width:100%;
+    word-wrap:break-word;
+}
+
+.id{
+    width: 40px;
+}
+
+.ativo{
+    width: 65px;
+    height: 10px;
+}
+
+.nome,.email{
+    width: 230px;
+}
+
+.botao_lista{
+    width: 75px;
+    height: 40px;
 }

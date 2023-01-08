@@ -59,7 +59,7 @@
 
 				<div class="form-group mt-3">
 					<label>Telefone</label>
-					<input type="text" class="form-control" id="telefone" name="telefone" placeholder="Telefone*" minlength="14" maxlength="14" 
+					<input type="text" class="form-control" id="telefone" name="telefone" placeholder="Telefone*" minlength="15" maxlength="15" 
 					<?php if (@$usuario != 'null') {
 									echo 'value="'.@$usuario->telefone.'"';			
 								 }else{
