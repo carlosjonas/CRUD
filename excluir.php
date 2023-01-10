@@ -10,7 +10,7 @@
 		exit;
 	}
 
-	//Consultando a vaga para editar
+	//Consultando a vaga para excluir
 	$usuario = Usuario::getUsuario($_GET['id']);
 	
 	//Validação da vaga
@@ -18,7 +18,6 @@
 		header('location: index.php?status=error');
 		exit;				
 	}
-
 	//Validação do POST
 	if (isset($_POST['excluir'])) {
 		//echo "<pre>"; print_r($usuario); echo "</pre>"; exit;

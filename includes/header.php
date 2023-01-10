@@ -1,3 +1,7 @@
+<?php 
+  //Incluindo um define para deixar os links do header ativos
+  define('ATIVO','index'); 
+?>
 <!doctype html>
 <html lang="pt-br">
   <head>

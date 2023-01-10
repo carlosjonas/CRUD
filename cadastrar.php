@@ -6,9 +6,10 @@
 
 	use \App\Entity\Usuario;
 
+	$usuario = new Usuario;
+	
 	//Validação do POST
-	if (isset($_POST['nome'],$_POST['email'],$_POST['rg'],$_POST['cpf'],$_POST['telefone'],$_POST['ativo'])) {
-		$usuario = new Usuario();
+	if (isset($_POST['nome'],$_POST['email'],$_POST['rg'],$_POST['cpf'],$_POST['telefone'],$_POST['ativo'])) {		
 		$usuario->nome 	   = $_POST['nome'];
 		$usuario->email    = $_POST['email'];
 		$usuario->rg 	   = $_POST['rg'];

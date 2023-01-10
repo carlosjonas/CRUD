@@ -28,7 +28,11 @@
 							<td>' .$usuario->telefone. '</td>
 							<td class="ativo">' .($usuario->ativo == '1' ? 'Sim' : 'Não'). '</td>
 							<td>
-								<a href="editar.php?id=' .$usuario->id. '"><button type="button" class="btn btn-primary botao_lista">Editar</button></a><a href="excluir.php?id=' .$usuario->id. '"><button type="button" class="btn btn-danger botao_lista">Excluir</button>
+								<a href="editar.php?id=' .$usuario->id. '">
+									<button type="button" class="btn btn-primary botao_lista">Editar</button>
+								</a>
+								<a href="excluir.php?id=' .$usuario->id. '">
+									<button type="button" class="btn btn-danger botao_lista">Excluir</button>
 								</a>
 							</td>
 						</tr>';

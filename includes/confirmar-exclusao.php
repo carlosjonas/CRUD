@@ -1,14 +1,5 @@
-<?php 
-
-use \App\Entity\Usuario;
- ?>
 	<main>
 		<div class="container mt-5 pt-5">
-			<section>
-				<a href="index.php">
-					<button class="btn btn-success">Voltar</button>
-				</a>
-			</section>
 
 			<h2 class="mt-3">Excluir Vaga</h2>
 
